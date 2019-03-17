@@ -4,7 +4,7 @@ metadata:
   name: pratice-pod
 spec:
   containers:
-    -name: pratice
-      image: jenkins
-      port:
-      -  containerport: 80
+  - name: pratice
+    image: jenkins
+    port:
+    - containerport: 80
