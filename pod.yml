@@ -5,6 +5,6 @@ metadata:
 spec:
   containers:
     -name: pratice
-      image: chinmaykumarsahoo/pratice
+      image: jenkins
       port:
       -  containerport: 80
