@@ -1,22 +1,22 @@
-apiVersion: extensions/v1beta
+apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: webserver
-  spec:
-    replicas: 3
-    minReadyseconds: 30
-    strategy:
-      type: RollingUpdate
-      rollingUpdate:
-        maxUnavailable: 1
-        maxSurge: 1
-    template:
-      metadata:
-        labels:
-          apps: web
-      spec:
-        containers:
-        - name: apache
-          image: nginx
-          port:
-          - containerPort: 80
+spec:
+  replicas: 3
+  minReadySeconds: 30
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        apps: web
+    spec:
+      containers:
+      - name: apache
+        image: httpd
+        ports:
+        - containerPort: 80
