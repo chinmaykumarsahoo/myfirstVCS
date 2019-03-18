@@ -5,15 +5,15 @@ metadata:
 spec: 
   replicas: 2
   selector:
-    app:nginx
+    app: nginx
   template:
     metadata:
-      lable:
+      labels:
         app: nginx
-        ver: 1.0
-  spec:
-    containers:
-    - name: simple-pod
-      image: nginx
-      ports:
-      - containerport: 80
+        ver: "1.0"
+    spec:
+      containers:
+      - name: simple-pod
+        image: nginx
+        ports:
+        - containerPort: 80
